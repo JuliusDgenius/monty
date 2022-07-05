@@ -6,7 +6,7 @@
  * @line_number: number of line opcode occurs on
  *
  */
-void _pint(stack_t **stack, unsigned char line_number)
+void _pchar(stack_t **stack, unsigned int line_number)
 {
 	stack_t *runner;
 
