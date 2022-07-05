@@ -6,7 +6,7 @@
  * @line_number: integer
  * Return: void
  */
-void _pop(stck_t **stack, unsigned int line_number)
+void _pop(stack_t **stack, unsigned int line_number)
 {
 	stack_t *node = *stack;
 

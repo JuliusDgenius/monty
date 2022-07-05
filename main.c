@@ -48,32 +48,32 @@ exit(-1);
  */
 instruct_func get_op_func(char *str)
 {
-int i;
-instruction_t instruct[] = {
-{"push", _push},
-{"pall", _pall},
-{"pint", _pint},
-{"pop", _pop},
-{"swap", _swap},
-{"add", _add},
-{"nop", _nop},
-{"sub", _sub},
-{"mul", _mul},
-{"div", _div},
-{"mod", _mod},
-{"pchar", _pchar},
-{"pstr", _pstr},
-{"rotl", _rotl},
-{"rotr", _rotr},
-{NULL, NULL},
-};
-i = 0;
+	int i;
+	instruction_t instruct[] = {
+	{"push", _push},
+	{"pall", _pall},
+	{"pint", _pint},
+	{"pop", _pop},
+	{"swap", _swap},
+	{"add", _add},
+	{"nop", _nop},
+	{"sub", _sub},
+	{"mul", _mul},
+	{"div", _div},
+	{"mod", _mod},
+	{"pchar", _pchar},
+	{"pstr", _pstr},
+	{"rotl", _rotl},
+	{"rotr", _rotr},
+	{NULL, NULL},
+	};
+
+	i = 0;
 while (instruct[i].f != NULL && strcmp(instruct[i].opcode, str) != 0)
 {
 i++;
 }
-
-	return (instruct[i].f);
+return (instruct[i].f);
 }
 
 /**
@@ -83,22 +83,25 @@ i++;
  */
 int isnumber(char *str)
 {
-unsigned int i;
+	unsigned int i;
 
-if (str == NULL)
-	return (0);
+	if (str == NULL)
+		return (0);
 	i = 0;
 	while (str[i])
-{
-										if (str[0] == '-')
-{
-	i++;
-	continue;
-}
-if (!isdigit(str[i]))
-return (0);
-i++;
-}
+	{
+		if (str[0] == '-')
+		{
+			i++;
+			continue;
+		}
+
+		if (!isdigit(str[i]))
+		{
+			return (0);
+			i++;
+		}
+	}
 	return (1);
 }
 
@@ -111,11 +114,11 @@ i++;
  */
 char *parse_line(char *line, stack_t **stack, unsigned int line_number)
 {
-char *op_code, *push, *arg;
-(void)stack;
+	char *op_code, *push, *arg;
+	(void) stack;
 
-push = "push";
-op_code = strtok(line, "\n ");
+	push = "push";
+	op_code = strtok(line, "\n ");
 if (op_code == NULL)
 	return (NULL);
 if (strcmp(op_code, push) == 0)

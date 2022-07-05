@@ -21,9 +21,9 @@ extern int push_arg;
  */
 typedef struct stack_s
 {
-		int n;
-			struct stack_s *prev;
-				struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 
 /**
@@ -61,7 +61,7 @@ char *parse_line(char *line, stack_t **stack, unsigned int line_number);
 typedef void (*instruct_func)(stack_t **stack, unsigned int line_number);
 instruct_func get_op_func(char *str);
 
-/*Fuxntions Monty*/
+/*Functions Monty*/
 void _pall(stack_t **stack, unsigned int line_number);
 void _push(stack_t **stack, unsigned int line_number);
 void _pint(stack_t **stack, unsigned int line_number);
