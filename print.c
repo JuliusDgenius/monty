@@ -1,12 +1,12 @@
 #include "monty.h"
 
 /**
- * _print - print int a top of stack
+ * _pint - pint int a top of stack
  * @stack: A pointer to linked list stack
  * @line_number: number of line opcode occurs on
  *
  */
-void _print(stack_t **stack, unsigned int line_number)
+void _pint(stack_t **stack, unsigned int line_number)
 {
 	stack_t *runner;
 
