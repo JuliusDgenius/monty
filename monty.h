@@ -73,6 +73,6 @@ void execute_opcode(char *opcode, char *arg, stack_t **stack, unsigned int line_
 int is_valid_integer(char *str);
 
 /* File processing */
-void process_file(const char *filename);
+void process_file(FILE *file, stack_t **stack);
 
 #endif /* MONTY_H */

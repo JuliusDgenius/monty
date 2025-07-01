@@ -5,7 +5,7 @@
  * @stack: Double pointer to the top of the stack
  * @line_number: Current line number in bytecode file
  */
- void push(stack_t **stack, unsigned int line_number)
+void push(stack_t **stack, unsigned int line_number)
 {
 stack_t *new_node;
 
@@ -18,7 +18,7 @@ if (!new_node)
 fprintf(stderr, "Error: malloc failed\n");
 exit(EXIT_FAILURE);
 }
-    
+
 new_node->n = global.push_value;
 new_node->prev = NULL;
 
@@ -27,7 +27,7 @@ if (global.mode == STACK_MODE) /* LIFO - add at head */
 {
 new_node->next = *stack;
 if (*stack)
-    (*stack)->prev = new_node;
+(*stack)->prev = new_node;
 *stack = new_node;
 }
 else /* QUEUE_MODE - FIFO - add at tail */
@@ -35,7 +35,7 @@ else /* QUEUE_MODE - FIFO - add at tail */
 new_node->next = NULL;
 if (!*stack)
 {
-    *stack = new_node;
+*stack = new_node;
 }
 else
 {
