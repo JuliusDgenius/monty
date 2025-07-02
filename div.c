@@ -10,7 +10,7 @@
  *   - Handles division by zero
  *   - Handles stack too short
  */
-void div_op(stack_t **stack, unsigned int line_number)
+void div(stack_t **stack, unsigned int line_number)
 {
 int dividend, divisor, result;
 
