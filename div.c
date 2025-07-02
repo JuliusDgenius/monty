@@ -1,3 +1,5 @@
+#include "monty.h"
+
 /**
  * div_op - Divides second top element by top element of stack
  * @stack: Double pointer to top of stack
@@ -10,7 +12,7 @@
  *   - Handles division by zero
  *   - Handles stack too short
  */
-void div(stack_t **stack, unsigned int line_number)
+void div_op(stack_t **stack, unsigned int line_number)
 {
 int dividend, divisor, result;
 
