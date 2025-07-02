@@ -14,6 +14,7 @@ void process_file(FILE *file, stack_t **stack)
 {
 char buffer[BUFFER_SIZE];
 unsigned int line_number = 0;
+char *trimmed;
 
 while (fgets(buffer, BUFFER_SIZE, file) != NULL)
 {
@@ -25,8 +26,13 @@ line_number++;
 if (len > 0 && buffer[len - 1] == '\n')
 buffer[len - 1] = '\0';
 
+/* Skip leading whitespaces */
+trimmed = buffer;
+while (*trimmed == ' ' || *trimmed == '\t')
+trimmed++;
+
 /* Skip empty lines and comments */
-if (buffer[0] == '#' || buffer[0] == '\n' || buffer[0] == '\0')
+if (*trimmed == '#' || *trimmed == '\0')
 continue;
 
 /* Tokenize line to get opcode */
