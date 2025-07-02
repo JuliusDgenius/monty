@@ -62,6 +62,7 @@ void add(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
 void stack_mode(stack_t **stack, unsigned int line_number);
 void queue_mode(stack_t **stack, unsigned int line_number);
+void sub(stack_t **stack, unsigned int line_number);
 
 /* Linked list utilities */
 stack_t *add_node(stack_t **stack, const int n);
