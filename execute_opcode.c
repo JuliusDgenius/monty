@@ -11,11 +11,7 @@ void execute_opcode(
 char *opcode, char *arg, stack_t **stack, unsigned int line_number)
 {
 instruction_t instructions[] = {
-{"push", push},
-{"pall", pall},
-{"pint", pint},
-{"pop", pop},
-{"swap", swap},
+{"push", push}, {"pall", pall}, {"pint", pint}, {"pop", pop}, {"swap", swap},
 {"add", add},
 {"nop", nop},
 {"sub", sub},

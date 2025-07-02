@@ -24,7 +24,7 @@ exit(EXIT_FAILURE);
 top_element = (*stack)->n;
 second_top = (*stack)->next->n;
 
-result = top_element * second_top;
+result = top_element *second_top;
 
 /* Store result in second top */
 (*stack)->next->n = result;

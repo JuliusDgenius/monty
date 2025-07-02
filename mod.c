@@ -25,9 +25,10 @@ exit(EXIT_FAILURE);
 divisor = (*stack)->n;
 dividend = (*stack)->next->n;
 
-if (divisor == 0) {
+if (divisor == 0)
+{
 fprintf(stderr, "L%u: division by zero\n", line_number);
-exit(EXIT_FAILURE);  
+exit(EXIT_FAILURE);
 }
 
 result = divisor % dividend;
