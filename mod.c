@@ -31,10 +31,10 @@ fprintf(stderr, "L%u: division by zero\n", line_number);
 exit(EXIT_FAILURE);
 }
 
-result = divisor % dividend;
+result = dividend % divisor;
 
-/* Store result in second top */
-(*stack)->n = result;
+/* Store result in top element */
+(*stack)->next->n = result;
 
 /* Pop top element */
 pop(stack, line_number);
