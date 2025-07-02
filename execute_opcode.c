@@ -12,12 +12,12 @@ char *opcode, char *arg, stack_t **stack, unsigned int line_number)
 {
 instruction_t instructions[] = {
 {"push", push}, {"pall", pall}, {"pint", pint}, {"pop", pop}, {"swap", swap},
-{"add", add},
-{"nop", nop},
-{"sub", sub},
-{"div", div_op},
-{"mod", mod},
+{"add", add}, {"nop", nop}, {"sub", sub}, {"div", div_op}, {"mod", mod},
 {"mul", mul},
+{"pchar", pchar},
+{"pstr", pstr},
+{"rotl", rotl},
+{"rotr", rotr},
 {NULL, NULL}
 };
 
