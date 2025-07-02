@@ -13,7 +13,7 @@
  */
 void mod(stack_t **stack, unsigned int line_number)
 {
-int top_element, second_top, result;
+int divisor, dividend, result;
 
 /* Check for at least two elements */
 if (!*stack || !(*stack)->next)
